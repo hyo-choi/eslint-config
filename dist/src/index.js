@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: !0
 });
-const _typescripteslint = _interop_require_default(require("typescript-eslint")), _eslintpluginreact = _interop_require_default(require("eslint-plugin-react")), _eslintpluginreacthooks = _interop_require_default(require("eslint-plugin-react-hooks")), _eslintpluginesx = _interop_require_default(require("eslint-plugin-es-x")), _eslintpluginprettier = _interop_require_default(require("eslint-plugin-prettier")), _eslintconfigprettier = _interop_require_default(require("eslint-config-prettier"));
+const _globals = _interop_require_default(require("globals")), _typescripteslint = _interop_require_default(require("typescript-eslint")), _eslintpluginreact = _interop_require_default(require("eslint-plugin-react")), _eslintpluginreacthooks = _interop_require_default(require("eslint-plugin-react-hooks")), _eslintpluginesx = _interop_require_default(require("eslint-plugin-es-x")), _eslintpluginprettier = _interop_require_default(require("eslint-plugin-prettier")), _eslintconfigprettier = _interop_require_default(require("eslint-config-prettier"));
 function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -44,8 +44,11 @@ const config = [
             "prettier/prettier": "error"
         }
     }
-];
-module.exports = config.reduce((prev, cur)=>({
+].reduce((prev, cur)=>({
         ...prev,
         ...cur
     }), {});
+config.languageOptions.globals = {
+    ..._globals.default.browser,
+    ..._globals.default.node
+}, module.exports = config;

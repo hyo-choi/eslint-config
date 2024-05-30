@@ -1,11 +1,12 @@
-import tseslint, { Config } from "typescript-eslint";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import eslintPluginEcmascript from "eslint-plugin-es-x";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import eslintConfigPrettier from "eslint-config-prettier";
 
-const config: Config = [
+const config: ReturnType<typeof tseslint.config>[number] = [
   ...tseslint.configs.recommended,
   // FIXME: type error
   eslintConfigPrettier as any,
@@ -61,8 +62,9 @@ const config: Config = [
       "prettier/prettier": "error",
     },
   },
-];
+].reduce((prev, cur) => ({ ...prev, ...cur }), {});
+
+config.languageOptions!.globals = { ...globals.browser, ...globals.node };
 
 // 왜 array로 하고 pnpm eslint --print-config 하면 안될까?? (unexpected array 뜸)
-// eslint-disable-next-line no-undef
-module.exports = config.reduce((prev, cur) => ({ ...prev, ...cur }), {});
+module.exports = config;
