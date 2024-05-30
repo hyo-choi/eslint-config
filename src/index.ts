@@ -2,11 +2,8 @@ import tseslint, { Config } from "typescript-eslint";
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import eslintPluginEcmascript from "eslint-plugin-es-x";
+import eslintPluginPrettier from "eslint-plugin-prettier";
 import eslintConfigPrettier from "eslint-config-prettier";
-
-/**
- * eslint prettier 한방에 해결하고 싶은데 vscode formatter가 아직 9버전대 지원을 안하니까 그냥 prettier 지우고 eslint로 통합할까 ㄱ-
- */
 
 const config: Config = [
   ...tseslint.configs.recommended,
@@ -21,6 +18,7 @@ const config: Config = [
       },
     },
     plugins: {
+      prettier: eslintPluginPrettier,
       react: eslintPluginReact,
       "react-hooks": eslintPluginReactHooks,
       "es-x": eslintPluginEcmascript,
@@ -58,6 +56,9 @@ const config: Config = [
 
       // specific ecmascript features
       "es-x/no-regexp-lookbehind-assertions": "error",
+
+      // prettier related
+      "prettier/prettier": "error",
     },
   },
 ];
