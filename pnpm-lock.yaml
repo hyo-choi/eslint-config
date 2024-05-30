@@ -1,10 +1,5 @@
 lockfileVersion: '6.0'
 
-dependencies:
-  eslint-define-config:
-    specifier: ^2.1.0
-    version: 2.1.0
-
 devDependencies:
   '@eslint/js':
     specifier: ^9.3.0
@@ -1048,11 +1043,6 @@ packages:
     dependencies:
       eslint: 9.3.0
     dev: true
-
-  /eslint-define-config@2.1.0:
-    resolution: {integrity: sha512-QUp6pM9pjKEVannNAbSJNeRuYwW3LshejfyBBpjeMGaJjaDUpVps4C6KVR8R7dWZnD3i0synmrE36znjTkJvdQ==}
-    engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>=8.6.0'}
-    dev: false
 
   /eslint-plugin-es-x@7.6.0(eslint@9.3.0):
     resolution: {integrity: sha512-I0AmeNgevgaTR7y2lrVCJmGYF0rjoznpDvqV/kIkZSZbZ8Rw3eu4cGlvBBULScfkSOCzqKbff5LR4CNrV7mZHA==}
