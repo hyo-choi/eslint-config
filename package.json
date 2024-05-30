@@ -1,0 +1,19 @@
+{
+  "name": "@hyo-choi/eslint-config",
+  "version": "0.1.0",
+  "description": "",
+  "repository": "https://github.com/hyo-choi/eslint-config.git",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm swc src -d dist --delete-dir-on-start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.5.24",
+    "typescript": "^5.4.5"
+  }
+}
