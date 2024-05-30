@@ -64,6 +64,7 @@ const config: ReturnType<typeof tseslint.config>[number] = [
   },
 ].reduce((prev, cur) => ({ ...prev, ...cur }), {});
 
+// NOTE: 기본적으로 node, browser 둘다 활성화 되어있음, 상황에 따라 override 바람
 config.languageOptions!.globals = { ...globals.browser, ...globals.node };
 
 // 왜 array로 하고 pnpm eslint --print-config 하면 안될까?? (unexpected array 뜸)
