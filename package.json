@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "repository": "https://github.com/hyo-choi/eslint-config.git",
-  "main": "index.js",
+  "types": "./src/index.ts",
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "pnpm swc src -d dist --delete-dir-on-start",
     "test": "echo \"Error: no test specified\" && exit 1"
