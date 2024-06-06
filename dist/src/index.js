@@ -9,7 +9,7 @@ function _interop_require_default(obj) {
     };
 }
 const config = [
-    ..._typescripteslint.default.configs.recommended,
+    ..._typescripteslint.default.configs.recommendedTypeChecked,
     _eslintconfigprettier.default,
     {
         name: "hyo-choi",

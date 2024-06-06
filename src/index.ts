@@ -1,3 +1,5 @@
+// import { dirname } from "path";
+// import { fileURLToPath } from 'url';
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import eslintPluginReact from "eslint-plugin-react";
@@ -7,11 +9,19 @@ import eslintPluginPrettier from "eslint-plugin-prettier";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 const config: ReturnType<typeof tseslint.config>[number] = [
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   // FIXME: type error
   eslintConfigPrettier as any,
   {
     name: "hyo-choi",
+    // FIXME: for type information required rule
+    // https://typescript-eslint.io/getting-started/typed-linting/
+    // languageOptions: {
+    //   parserOptions: {
+    //     project: true,
+    // tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
+    //   },
+    // },
     // https://github.com/jsx-eslint/eslint-plugin-react#configuration
     settings: {
       react: {
@@ -46,8 +56,6 @@ const config: ReturnType<typeof tseslint.config>[number] = [
       "default-param-last": "off",
       "@typescript-eslint/default-param-last": "error",
 
-      // FIXME: type information required rule
-      // https://typescript-eslint.io/getting-started/typed-linting/
       // "dot-notation": "off",
       // "@typescript-eslint/dot-notation": "error",
 
