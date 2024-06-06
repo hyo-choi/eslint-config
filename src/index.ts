@@ -84,6 +84,8 @@ const config: ReturnType<typeof tseslint.config>[number] = [
       // "@typescript-eslint/no-unsafe-assignment": "error",
       // "@typescript-eslint/no-unsafe-call": "error",
       // "@typescript-eslint/no-array-delete": "error",
+      // "@typescript-eslint/no-unsafe-return": "error",
+      // "@typescript-eslint/no-unsafe-member-access": "error",
       "@typescript-eslint/no-unnecessary-type-constraint": "error",
       "@typescript-eslint/no-invalid-void-type": "error",
 
