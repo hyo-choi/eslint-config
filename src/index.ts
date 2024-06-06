@@ -23,6 +23,7 @@ const config: ReturnType<typeof tseslint.config>[number] = [
       react: eslintPluginReact,
       "react-hooks": eslintPluginReactHooks,
       "es-x": eslintPluginEcmascript,
+      "@typescript-eslint": tseslint.plugin,
     },
     rules: {
       // general
@@ -34,7 +35,33 @@ const config: ReturnType<typeof tseslint.config>[number] = [
         },
       ],
       "no-undef": "error",
+
+      "func-style": ["error", "declaration"],
+
       "no-unused-vars": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "no-unused-expressions": "off",
+      "@typescript-eslint/no-unused-expressions": "error",
+
+      "default-param-last": "off",
+      "@typescript-eslint/default-param-last": "error",
+
+      "dot-notation": "off",
+      "@typescript-eslint/dot-notation": "error",
+
+      // related to typescript
+      "@typescript-eslint/array-type": ["error", { default: "generic" }],
+      "@typescript-eslint/ban-types": "error",
+
+      "@typescript-eslint/method-signature-style": ["error", "property"],
+
+      "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
+
+      "@typescript-eslint/adjacent-overload-signatures": "error",
+
+      "@typescript-eslint/consistent-type-exports": "error",
+      // 추후...
+      // "@typescript-eslint/consistent-type-imports": "error",
 
       // "import/no-relative-parent-imports": ["error"],
       // "import/order": [
@@ -54,6 +81,13 @@ const config: ReturnType<typeof tseslint.config>[number] = [
       "react/prop-types": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
+      "react/function-component-definition": [
+        2,
+        {
+          namedComponents: "function-declaration",
+          unnamedComponents: "function-expression",
+        },
+      ],
 
       // specific ecmascript features
       "es-x/no-regexp-lookbehind-assertions": "error",
