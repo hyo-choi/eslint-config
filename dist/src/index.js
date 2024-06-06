@@ -40,14 +40,14 @@ const config = [
                 "error",
                 "declaration"
             ],
-            "no-unused-vars": "error",
+            "no-unused-vars": "off",
             "@typescript-eslint/no-unused-vars": "error",
             "no-unused-expressions": "off",
             "@typescript-eslint/no-unused-expressions": "error",
             "default-param-last": "off",
             "@typescript-eslint/default-param-last": "error",
-            "dot-notation": "off",
-            "@typescript-eslint/dot-notation": "error",
+            "no-loss-of-precision": "off",
+            "@typescript-eslint/no-loss-of-precision": "error",
             "@typescript-eslint/array-type": [
                 "error",
                 {
@@ -55,16 +55,22 @@ const config = [
                 }
             ],
             "@typescript-eslint/ban-types": "error",
-            "@typescript-eslint/method-signature-style": [
+            "@typescript-eslint/consistent-type-definitions": [
                 "error",
-                "property"
+                "interface"
             ],
             "@typescript-eslint/consistent-indexed-object-style": [
                 "error",
                 "record"
             ],
+            "@typescript-eslint/no-duplicate-enum-values": "error",
+            "@typescript-eslint/method-signature-style": [
+                "error",
+                "property"
+            ],
             "@typescript-eslint/adjacent-overload-signatures": "error",
-            "@typescript-eslint/consistent-type-exports": "error",
+            "@typescript-eslint/no-unnecessary-type-constraint": "error",
+            "@typescript-eslint/no-invalid-void-type": "error",
             "react/display-name": "warn",
             "react/prop-types": "off",
             "react-hooks/rules-of-hooks": "error",

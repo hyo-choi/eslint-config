@@ -38,7 +38,7 @@ const config: ReturnType<typeof tseslint.config>[number] = [
 
       "func-style": ["error", "declaration"],
 
-      "no-unused-vars": "error",
+      "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
       "no-unused-expressions": "off",
       "@typescript-eslint/no-unused-expressions": "error",
@@ -46,20 +46,55 @@ const config: ReturnType<typeof tseslint.config>[number] = [
       "default-param-last": "off",
       "@typescript-eslint/default-param-last": "error",
 
-      "dot-notation": "off",
-      "@typescript-eslint/dot-notation": "error",
+      // FIXME: type information required rule
+      // https://typescript-eslint.io/getting-started/typed-linting/
+      // "dot-notation": "off",
+      // "@typescript-eslint/dot-notation": "error",
+
+      // "no-return-await": "off",
+      // "@typescript-eslint/return-await": ["error", "in-try-catch"],
+
+      // "no-throw-literal": "off",
+      // "@typescript-eslint/only-throw-error": "error",
+
+      "no-loss-of-precision": "off",
+      "@typescript-eslint/no-loss-of-precision": "error",
 
       // related to typescript
       "@typescript-eslint/array-type": ["error", { default: "generic" }],
       "@typescript-eslint/ban-types": "error",
+      "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+      "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
+      // "@typescript-eslint/promise-function-async": "error",
+
+      "@typescript-eslint/no-duplicate-enum-values": "error",
 
       "@typescript-eslint/method-signature-style": ["error", "property"],
-
-      "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
-
       "@typescript-eslint/adjacent-overload-signatures": "error",
 
-      "@typescript-eslint/consistent-type-exports": "error",
+      // "@typescript-eslint/no-confusing-void-expression": "error",
+      // "@typescript-eslint/no-explicit-any": "error",
+      // "@typescript-eslint/no-base-to-string": "error",
+      // "@typescript-eslint/no-floating-promises": "error",
+      // "@typescript-eslint/no-misused-promises": "error",
+      // "@typescript-eslint/no-redundant-type-constituents": "error",
+      // "@typescript-eslint/no-redundant-type-constituents": "error",
+      // "@typescript-eslint/no-unnecessary-condition": "error",
+      // "@typescript-eslint/no-unsafe-argument": "error",
+      // "@typescript-eslint/no-unsafe-assignment": "error",
+      // "@typescript-eslint/no-unsafe-call": "error",
+      // "@typescript-eslint/no-array-delete": "error",
+      "@typescript-eslint/no-unnecessary-type-constraint": "error",
+      "@typescript-eslint/no-invalid-void-type": "error",
+
+      // "@typescript-eslint/strict-boolean-expressions": "error",
+
+      // "@typescript-eslint/require-array-sort-compare": [
+      //   "error",
+      //   { ignoreStringArrays: true },
+      // ],
+
+      // "@typescript-eslint/consistent-type-exports": "error",
       // 추후...
       // "@typescript-eslint/consistent-type-imports": "error",
 
