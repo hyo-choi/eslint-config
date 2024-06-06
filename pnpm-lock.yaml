@@ -9,7 +9,7 @@ dependencies:
     version: 7.6.0(eslint@9.3.0)
   eslint-plugin-prettier:
     specifier: ^5.1.3
-    version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@9.3.0)(prettier@3.2.5)
+    version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@9.3.0)(prettier@3.3.1)
   eslint-plugin-react:
     specifier: ^7.34.2
     version: 7.34.2(eslint@9.3.0)
@@ -32,7 +32,7 @@ devDependencies:
     version: 'link:'
   '@hyo-choi/prettier-config':
     specifier: github:hyo-choi/prettier-config#c0228ce87fad964a4c0168a44b88c969783b3802
-    version: github.com/hyo-choi/prettier-config/c0228ce87fad964a4c0168a44b88c969783b3802(prettier@3.2.5)
+    version: github.com/hyo-choi/prettier-config/c0228ce87fad964a4c0168a44b88c969783b3802(prettier@3.3.1)
   '@swc/cli':
     specifier: ^0.3.12
     version: 0.3.12(@swc/core@1.5.24)(chokidar@3.6.0)
@@ -52,8 +52,8 @@ devDependencies:
     specifier: ^9.3.0
     version: 9.3.0
   prettier:
-    specifier: 3.2.5
-    version: 3.2.5
+    specifier: ^3.3.1
+    version: 3.3.1
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -1034,7 +1034,7 @@ packages:
       eslint-compat-utils: 0.5.0(eslint@9.3.0)
     dev: false
 
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@9.3.0)(prettier@3.2.5):
+  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@9.3.0)(prettier@3.3.1):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1050,7 +1050,7 @@ packages:
     dependencies:
       eslint: 9.3.0
       eslint-config-prettier: 9.1.0(eslint@9.3.0)
-      prettier: 3.2.5
+      prettier: 3.3.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
     dev: false
@@ -2082,7 +2082,7 @@ packages:
       fast-diff: 1.3.0
     dev: false
 
-  /prettier-plugin-brace-style@0.6.2(prettier@3.2.5):
+  /prettier-plugin-brace-style@0.6.2(prettier@3.3.1):
     resolution: {integrity: sha512-/KVK1b0kttXBqqR/qmdecOTniDx9m6jZyuI9liZ75GLIWItUkehqbwDzFSX6yWBJHnJ/8/UbEdddNLsEnFBvbQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2092,14 +2092,13 @@ packages:
       prettier-plugin-astro:
         optional: true
     dependencies:
-      prettier: 3.2.5
+      prettier: 3.3.1
     dev: true
 
-  /prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  /prettier@3.3.1:
+    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
     engines: {node: '>=14'}
     hasBin: true
-    requiresBuild: true
 
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -2655,7 +2654,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  github.com/hyo-choi/prettier-config/c0228ce87fad964a4c0168a44b88c969783b3802(prettier@3.2.5):
+  github.com/hyo-choi/prettier-config/c0228ce87fad964a4c0168a44b88c969783b3802(prettier@3.3.1):
     resolution: {tarball: https://codeload.github.com/hyo-choi/prettier-config/tar.gz/c0228ce87fad964a4c0168a44b88c969783b3802}
     id: github.com/hyo-choi/prettier-config/c0228ce87fad964a4c0168a44b88c969783b3802
     name: prettier-config
@@ -2663,8 +2662,8 @@ packages:
     peerDependencies:
       prettier: ^3.3.1
     dependencies:
-      prettier: 3.2.5
-      prettier-plugin-brace-style: 0.6.2(prettier@3.2.5)
+      prettier: 3.3.1
+      prettier-plugin-brace-style: 0.6.2(prettier@3.3.1)
     transitivePeerDependencies:
       - prettier-plugin-astro
     dev: true
