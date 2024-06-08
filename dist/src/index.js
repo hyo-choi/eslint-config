@@ -35,7 +35,7 @@ const config = [
                     ]
                 }
             ],
-            "no-undef": "error",
+            "no-undef": "off",
             "func-style": [
                 "error",
                 "declaration"

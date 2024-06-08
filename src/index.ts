@@ -44,7 +44,8 @@ const config: ReturnType<typeof tseslint.config>[number] = [
           patterns: ["../*"],
         },
       ],
-      "no-undef": "error",
+      // https://typescript-eslint.io/troubleshooting/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+      "no-undef": "off",
 
       "func-style": ["error", "declaration"],
 
